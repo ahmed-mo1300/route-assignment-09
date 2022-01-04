@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+    <title>Bookmarker</title>
+  </head>
+  <body>
+    <div class="container py-3 my-4">
+      <h1 class="fa-bold text-muted border-bottom pb-3 mb-3">Bookmarker</h1>
+    </div>
+
+    <div class="container py-3 my-4 bg-secondary bg-opacity-50">
+      <label for="site-name">Site Name</label>
+      <input type="text" id="site-name" class="form-control my-3" />
+
+      <label for="site-url">Site URL</label>
+      <input type="text" id="site-url" class="form-control my-3" />
+
+      <div class="text-center">
+        <button id="site-btn" class="btn btn-primary" onclick="addData();">Add Bookmark</button>
+      </div>
+    </div>
+
+    <input
+      type="search"
+      id="site-search"
+      class="form-control mb-5 m-auto w-50"
+      placeholder="Search By Site Name"
+      onkeyup="searchItems();"
+    />
+
+    <!-- TODO ERROR
+      onkeyup="searchItems();"  -- not fired when click on x to clear the search
+    -->
+
+    <div class="container">
+      <div id="display-data"></div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
